@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/static/style.css?v=5">
+</head>
+<body class="fade-in">
+    <div class="container">
+        <h1>Results for: <strong>{{ symbol }}</strong></h1>
+
+        {% if crypto_data | length > 0 %}
+        {% for item in crypto_data %}
+        <div class="card reveal">
+            <h3>{{ item.title }}</h3>
+            <p><span>Source:</span> {{ item.source }}</p>
+            <p>{{ item.summary }}</p>
+            <a href="{{ item.url }}" target="_blank" class="text-link">Read more</a>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p class="error">No articles found for "{{ symbol }}".</p>
+        {% endif %}
+
+        <h2>Latest News</h2>
+        {% if crypto_news | length > 0 %}
+        {% for news in crypto_news %}
+        <div class="card reveal">
+            <h3>{{ news.title }}</h3>
+            <p><span>Source:</span> {{ news.source }}</p>
+            <p><span>Date:</span> {{ news.published_on | date(format="%Y-%m-%d %H:%M") }}</p>
+            <a href="{{ news.url }}" target="_blank" class="text-link">Read news</a>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p class="error">No recent news found for "{{ symbol }}".</p>
+        {% endif %}
+
+        <div class="nav-actions">
+            <a href="/" class="primary-btn outline-btn">Back to Search</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>CryptoNews © 2025</p>
+    </footer>
+</body>
+</html>
