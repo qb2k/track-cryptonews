@@ -55,8 +55,8 @@ track-cryptonews/
 1. Install [Rust](https://rustup.rs)  
 2. Clone the repository:
    ```bash
-   git clone https://github.com/your_username/cryptonews-aggregator.git
-   cd cryptonews-aggregator
+   git clone https://github.com/qb2k/track-cryptonews.git
+   cd track-cryptonews
    ```
 3. Run the application:
    ```bash
