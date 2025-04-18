@@ -19,9 +19,8 @@ A lightweight Rust web application that retrieves and displays cryptocurrency in
 - **API:** [CoinGecko](https://www.coingecko.com/en/api)  
 - **Frontend:** Basic HTML search form  
 - **Project Structure:**
-  ```bash
+```bash
 track-cryptonews/  
-│                 
 │── src/  
 │   │── main.rs          
 │   │── api/
@@ -42,8 +41,7 @@ track-cryptonews/
 │   │   │── mod.rs
 │── static/  
 │   │── styles.css
-│           
-│  │  
+│             
 │── .env
 │── Cargo.toml
 │── README.md                
